@@ -17,12 +17,148 @@
             </div>
            
             <div class="navbar-end">
-              <a class="btn bg-blue-600 w-24 h-3">Blog</a>   
+              <a class="btn bg-sky-600 w-24 h-3">Blog</a>   
             </div>
           </div>
     </header>
     <main>
-        
+        <div class="flex flex-col  lg:flex-row mt-6 ml-5 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-3  gap-5 ">
+                <div class="card w-72 bg-base-100 shadow">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/triangle.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title  ">Triangle</h2>
+                      <p>Area (A) = 0.5 * b * h</p>
+                      <div class="flex flex-row ">
+                        <div class="mr-6" >
+                            <input id="triBase" class="w-16 bg-slate-100 rounded" type="number" placeholder="base">
+                            <span class="ml-2">cm</span>
+                        </div> 
+                        <div>
+                            <input id="triHeight" class="w-16 bg-slate-100 rounded" type="number" placeholder="height">
+                            <span class="ml-2">cm</span>
+                        </div>
+                      </div>
+                      <div class="card-actions">
+                        <button id="triBtn" class="btn btn-primary bg-sky-600 mt-5 ">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-72 bg-base-100 shadow">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/rectangle.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Rectangle</h2>
+                      <p>Area (A) = w * l</p>
+                      <div class="flex flex-row ">
+                        <div class="mr-6" ><input class="w-16 bg-slate-100 rounded" type="number" placeholder="width"><span class="ml-2">cm</span></div> 
+                        <div  ><input class="w-16 bg-slate-100 rounded px-2" type="number" placeholder="length"><span class="ml-2">cm</span></div>
+                      </div>
+                      <div class="card-actions">
+                        <button class="btn btn-primary bg-sky-600  mt-5">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-72 bg-base-100 shadow">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/parallelogram.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Parallelogram</h2>
+                      <p>Area (A) = b * h</p>
+                      <div class="flex flex-row ">
+                        <div class="mr-6" ><input class="w-16 bg-slate-100 rounded" type="number" placeholder="base"><span class="ml-2">cm</span></div> 
+                        <div  ><input class="w-16 bg-slate-100 rounded" type="number" placeholder="height"><span class="ml-2">cm</span></div>
+                      </div>
+                      <div class="card-actions">
+                        <button class="btn btn-primary bg-sky-600  mt-5">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-72 bg-base-100 shadow">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/rhombus.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Rhombus</h2>
+                      <p>Area (A) = 0.5* d <sub>1</sub> * d <sub>2</sub></p>
+                      <div class="flex flex-row ">
+                        <div class="mr-6" ><input class="w-16 bg-slate-100 rounded" type="number" placeholder="d1"><span class="ml-2">cm</span></div> 
+                        <div  ><input class="w-16 bg-slate-100 rounded" type="number" placeholder="d2"><span class="ml-2">cm</span></div>
+                      </div>
+                      <div class="card-actions">
+                        <button class="btn btn-primary bg-sky-600  mt-5">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-72 bg-base-100 shadow">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/pentagon.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title"> Pentagon</h2>
+                      <p>Area (A) = 0.5 * p * b</p>
+                      <div class="flex flex-row ">
+                        <div class="mr-6" ><input class="w-16 bg-slate-100 rounded" type="number" placeholder="p"><span class="ml-2">cm</span></div> 
+                        <div  ><input class="w-16 bg-slate-100 rounded" type="number" placeholder="b"><span class="ml-2">cm</span></div>
+                      </div>
+                      <div class="card-actions">
+                        <button class="btn btn-primary bg-sky-600  mt-5">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-72 bg-base-100 shadow">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/ellipse.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Ellipse</h2>
+                      <p>Area (A) = πab</p>
+                      <div class="flex flex-row ">
+                        <div class="mr-6" ><input class="w-16 bg-slate-100 rounded" type="number" placeholder="a"><span class="ml-2">cm</span></div> 
+                        <div  ><input class="w-16 bg-slate-100 rounded" type="number" placeholder="b"><span class="ml-2">cm</span></div>
+                      </div>
+                      <div class="card-actions">
+                        <button class="btn btn-primary bg-sky-600  mt-5">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="card w-75 max-w-md h-fit  mx-auto shadow p-10">
+                <div>
+                    
+                </div>
+                    <h1 class="text-3xl w-96 text-center font-bold underline mt-5">
+                      Area calculation 
+                    </h1>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="table w-full">
+                          <thead>
+                            <tr>
+                              <th>No</th>
+                              <th>Name</th>
+                              <th>Area</th>
+                              
+                            </tr>
+                          </thead>
+                          <tbody id="table-container">
+                            <!-- <tr>
+                              <th>1</th>
+                              <td>Cy triangle</td>
+                              <td>34</td>
+                              
+                            </tr> -->
+                          </tbody>
+                        </table>
+                      </div>
+                </div>
+            </div>
+        </div>
     </main>
     
 
