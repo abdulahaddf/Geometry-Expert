@@ -12,6 +12,23 @@ document.getElementById('pentaBtn').addEventListener('click', function(){
     let area = areaType1('penta1', 'penta2')
     console.log(area);
 });
+document.getElementById('recBtn').addEventListener('click', function(){
+    let area = areaType2('rec1', 'rec2')
+    console.log(area);
+});
+document.getElementById('paraBtn').addEventListener('click', function(){
+    let area = areaType2('para1', 'para2')
+    console.log(area);
+});
+document.getElementById('elliBtn').addEventListener('click', function(){
+    const pi = 3.14;
+    const a = document.getElementById('elli1').value;
+    const b = document.getElementById('elli2').value;
+    const area = pi * parseFloat(a) * parseFloat(b);
+
+    console.log(area);
+});
+
 
 
 function areaType1(id1,id2) {
