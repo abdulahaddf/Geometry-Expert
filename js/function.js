@@ -1,43 +1,52 @@
 let serial = 0;
+document.getElementById('blogBtn').addEventListener('click', function(){
+    window.location.href = "blog.html"
+    
+});
 document.getElementById('triBtn').addEventListener('click', function(){
     serial ++;
    let area = areaType1('triBase', 'triHeight')
    displayData("Triangle", area);
   
 });
+document.getElementById('recBtn').addEventListener('click', function(){
+    serial ++;
+    let area = areaType2('rec1', 'rec2')
+    displayData("Rectangle", area);
+  
+
+});
+document.getElementById('paraBtn').addEventListener('click', function(){
+    serial ++;
+    let area = areaType2('para1', 'para2')
+    displayData("Parallelogram", area);
+  
+
+});
 
 document.getElementById('romBtn').addEventListener('click', function(){
     serial ++;
     let area = areaType1('romd1', 'romd2')
-    console.log(area);
+    displayData("Rhombus", area);
+  
     
 
 });
 document.getElementById('pentaBtn').addEventListener('click', function(){
     serial ++;
     let area = areaType1('penta1', 'penta2')
-    console.log(area);
+    displayData("Pentagon", area);
+  
 
 });
-document.getElementById('recBtn').addEventListener('click', function(){
-    serial ++;
-    let area = areaType2('rec1', 'rec2')
-    console.log(area);
 
-});
-document.getElementById('paraBtn').addEventListener('click', function(){
-    serial ++;
-    let area = areaType2('para1', 'para2')
-    console.log(area);
-
-});
 document.getElementById('elliBtn').addEventListener('click', function(){
     serial ++;
     const pi = 3.14;
     const a = document.getElementById('elli1').value;
     const b = document.getElementById('elli2').value;
     const area = pi * parseFloat(a) * parseFloat(b);
-    console.log(area);
+    displayData("Ellipse", area);
 });
 
 
@@ -70,7 +79,7 @@ function displayData(name, area) {
       <td>${serial}</td>
       <td>${name}</td>
       <td>${area}</td>
-      <button class="btn btn-sm bg-sky-600 mt-3">Convert</button>
+      <button class="btn btn-sm bg-sky-600 text-sm mt-3">Convert</button>
       </td>
       
     `;
