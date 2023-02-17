@@ -75,5 +75,5 @@ function displayData(name, area) {
       
     `;
     container.appendChild(tr);
-//   document.getElementById("total-product").innerText = serial;
+
 }
