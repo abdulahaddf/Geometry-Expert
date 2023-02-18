@@ -1,8 +1,13 @@
 let serial = 0;
+// for blog post
 document.getElementById('blogBtn').addEventListener('click', function(){
-    window.location.href = "blog.html"
+    window.location.href = './blog.html';
     
 });
+
+
+
+
 document.getElementById('triBtn').addEventListener('click', function(){
     serial ++;
    let area = areaType1('triBase', 'triHeight')
@@ -50,7 +55,7 @@ document.getElementById('elliBtn').addEventListener('click', function(){
 });
 
 
-
+// function for calculating the area of Triangle, Rhombus, Pentagon
 function areaType1(id1,id2) {
     const b = document.getElementById(id1).value;
     const h = document.getElementById(id2).value;
@@ -60,6 +65,7 @@ function areaType1(id1,id2) {
     const area = 0.5 * parseFloat(b) * parseFloat(h);
     return area;
 }
+//function for calculating the area of rectangle & Parallelogram
 function areaType2(id1,id2) {
     const w = document.getElementById(id1).value;
     const l = document.getElementById(id2).value;
@@ -79,7 +85,7 @@ function displayData(name, area) {
       <td>${serial}</td>
       <td>${name}</td>
       <td>${area}</td>
-      <button class="btn btn-sm bg-sky-600 text-sm mt-3">Convert</button>
+      <td><button class="btn w-32 bg-sky-600 text-xs">Convert to m<sup>2</sup></button>
       </td>
       
     `;
