@@ -1,8 +1,7 @@
 let serial = 0;
 // for blog post
 document.getElementById('blogBtn').addEventListener('click', function(){
-    window.location.href = './blog.html';
-    
+    window.location.href = './blog.html';  
 });
 
 
@@ -54,23 +53,27 @@ document.getElementById('elliBtn').addEventListener('click', function(){
     displayData("Ellipse", area);
 });
 
-
-// function for calculating the area of Triangle, Rhombus, Pentagon
 function areaType1(id1,id2) {
     const b = document.getElementById(id1).value;
     const h = document.getElementById(id2).value;
-    if (b == "" || h == "" || b<= 0 || h <= 0) {
-        return alert("please enter any positive number");
-      }
+    
+    if (b == "" || h == "" || b <= 0 || h <= 0) {
+      alert("Please enter a positive number for both the base and height.");
+      return; // Return nothing if there is an error.
+    }
+  
     const area = 0.5 * parseFloat(b) * parseFloat(h);
     return area;
-}
+  }
+
+
 //function for calculating the area of rectangle & Parallelogram
 function areaType2(id1,id2) {
     const w = document.getElementById(id1).value;
     const l = document.getElementById(id2).value;
     if (w == "" || l == "" || w <= 0 || l <= 0) {
-        return alert("please enter any positive number");
+         alert("please enter any positive number");
+         return;
       }
     const area = parseFloat(w) * parseFloat(l);
     return area;
@@ -79,12 +82,15 @@ function areaType2(id1,id2) {
 
 // common function to display data
 function displayData(name, area) {
+    if (area === undefined) {
+        return;
+      }
     const container = document.getElementById("table-container");
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${serial}</td>
       <td>${name}</td>
-      <td>${area}</td>
+      <td>${area.toFixed(2)} cm²</td>
       <td><button class="btn w-32 bg-sky-600 text-xs">Convert to m<sup>2</sup></button>
       </td>
       
@@ -92,3 +98,17 @@ function displayData(name, area) {
     container.appendChild(tr);
 
 }
+
+function getRandomColor() {
+    let symbols, color;
+    symbols = "0123456789ABCDEF";
+    color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += symbols[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+    
+
+
